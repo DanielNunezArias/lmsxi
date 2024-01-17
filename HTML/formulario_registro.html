@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+    
+    <form action="registro.php" method="GET">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="50" required>
+        <br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" maxlength="50" required>
+        <br>
+
+        <label>Género:</label>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label>
+        
+        <input type="radio" id="femenino" name="genero" value="femenino" required>
+        <label for="femenino">Femenino</label>
+        
+        <input type="radio" id="noBinario" name="genero" value="noBinario" required>
+        <label for="noBinario">No binario</label>
+        <br>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="text" id="correo" name="correo" required>
+        <br>
+
+        <input type="checkbox" id="novedades" name="novedades" checked>
+        <label for="novedades">Deseo recibir información sobre novedades y ofertas</label>
+        <br>
+
+        <input type="checkbox" id="condiciones" name="condiciones" required>
+        <label for="condiciones">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+        <br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula ASIR</title>
+</head>
+<body>
+    <h1>Matrícula ASIR</h1>
+    
+    <form action="registro.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+        <br>
+
+        <label>Género:</label>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label>
+        
+        <input type="radio" id="femenino" name="genero" value="femenino" required>
+        <label for="femenino">Femenino</label>
+        
+        <input type="radio" id="noBinario" name="genero" value="noBinario" required>
+        <label for="noBinario">No binario</label>
+        <br>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <select id="dia" name="dia" required>
+            <!-- Opciones de día -->
+        </select>
+        <select id="mes" name="mes" required>
+            <!-- Opciones de mes -->
+        </select>
+        <select id="anio" name="anio" required>
+            <!-- Opciones de año -->
+        </select>
+        <br>
+
+        <label for="modulosAsir">Módulos de ASIR:</label>
+        <select id="modulosAsir" name="modulosAsir[]" multiple required>
+            <option value="sistemas">Sistemas Operativos</option>
+            <option value="redes">Redes</option>
+            <option value="basesDatos">Bases de Datos</option>
+            <option value="programacion">Programación</option>
+            <!-- Agregar más opciones según sea necesario -->
+        </select>
+        <br>
+
+        <label for="estudiosPrevios">Estudios Previos:</label>
+        <textarea id="estudiosPrevios" name="estudiosPrevios" rows="4" required></textarea>
+        <br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reiniciar">
+    </form>
+</body>
+</html>
