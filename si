@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definición del tipo para el elemento capital -->
+  <xs:complexType name="capitalType">
+    <xs:attribute name="nombre" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Definición del tipo para el elemento pais -->
+  <xs:complexType name="paisType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="comentario" type="xs:string"/>
+      <xs:element name="capital" type="capitalType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definición del elemento geografia_mundial -->
+  <xs:element name="geografia_mundial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="pais" type="paisType" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
